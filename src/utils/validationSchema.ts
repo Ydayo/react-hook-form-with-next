@@ -3,7 +3,6 @@ import { z } from "zod";
 export const validationSchema = z.object({
   name: z
     .string()
-    // .nonempty({ message: "名前は必須です" })
     .min(1, "名前は必須です")
     .min(4, "名前は4文字以上で入力してください"),
   email: z
